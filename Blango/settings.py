@@ -47,6 +47,7 @@ class Dev(Configuration):
 
         # my apps
         'blog.apps.BlogConfig',
+        'blango_auth.apps.BlangoAuthConfig',
 
         # Third Party Packages
         "crispy_forms",
@@ -149,6 +150,8 @@ class Dev(Configuration):
 
     DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+    # custom user model
+    AUTH_USER_MODEL = "blango_auth.User"
 
     # crispy form
     CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
