@@ -21,7 +21,7 @@
     {% endrow %}
 {% endfor %}
 
-{% if request.user.is_active %}
+{% if user.is_authenticated %}
     {% row "mt-4" %}
         {% col %}
             <h4>Add Comment</h4>

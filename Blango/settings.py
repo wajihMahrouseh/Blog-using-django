@@ -51,6 +51,7 @@ class Dev(Configuration):
         # Third Party Packages
         "crispy_forms",
         "crispy_bootstrap5",
+        "debug_toolbar",
     ]
 
 
@@ -66,6 +67,7 @@ class Dev(Configuration):
 
 
     MIDDLEWARE = [
+        "debug_toolbar.middleware.DebugToolbarMiddleware", # Django Debug Toolbar
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.middleware.common.CommonMiddleware',
@@ -151,6 +153,9 @@ class Dev(Configuration):
     # crispy form
     CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
     CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+    # Django Debug Toolbar
+    INTERNAL_IPS = ["127.0.0.1","192.168.11.179"]
 
     # logging settings
     LOGGING = {
